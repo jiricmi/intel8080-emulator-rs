@@ -39,7 +39,7 @@ pub struct CPUState {
 }
 
 impl CPUState {
-    fn new(rom: &[u8]) -> Self {
+    pub fn new(rom: &[u8]) -> Self {
         let mut memory = [0; MEMORY_SIZE];
         memory[..rom.len()].copy_from_slice(rom);
         Self {
